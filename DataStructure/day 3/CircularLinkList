@@ -1,0 +1,126 @@
+import java.util.* ;
+
+class Node {
+
+	    int data;
+	    Node next ;
+	    Node(int data)
+	    {
+	        this.data=data;
+	         Node next = null;
+	    }
+}
+
+
+	public void CircularLinkList() 
+	{
+		 
+		  Node root,last;
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+		 void createEvenLinkedList()
+		 {
+		     root=last=null;
+		 }
+		 
+		 void createOddLinkedList()
+		 {
+		     root=last=null;
+		 }
+	
+	
+	void  InsertAtRight(int data)
+	 
+	 {
+	     Node n=new Node(data);
+	     if (data%2==0)
+	     { 
+            void createEvenLinkedList()
+            {
+                root=last=null;
+            }
+	    	
+	     if(root==null)
+	     {
+	         root=last=n;
+	         last.next=root;
+	     }
+	     else
+	     {
+	        last.next=n;//1
+	        last=n;//2
+	        last.next=root;//3
+	     }
+        }
+	     else 
+
+         {
+            void createOddLinkedList()
+		 {
+		     root=last=null;
+		 }
+
+	     { if(root==null)
+	     {
+	         root=last=n;
+	         last.next=root;
+	     }
+	     else
+	     {
+	        last.next=n;//1
+	        last=n;//2
+	        last.next=root;//3
+	     }
+	     }
+	     } 
+        }       
+
+	void PrintAllNodes()
+	{
+	     if(root==null)
+	     {System.out.println("List Empty");
+	     }
+	     else
+	     {
+	         Node t;
+	         t=root;
+	         do
+	         {
+	             System.out.println(t.data);
+	             t=t.next;
+	         }  while(t!=root);//2
+	     }
+	   }  
+       
+       
+
+       public static void main(String args[])
+       {
+          int ch,e;
+          CircularLinkedListDemo obj=new  CircularLinkedListDemo();
+          try (Scanner in = new Scanner(System.in)) {
+             obj.createEvenLinkedList();
+             obj.createOddLinkedList();
+             do
+             {
+                System.out.println("1.insertRight\n2.printList\n0.exit");
+                ch=in.nextInt();
+                switch(ch)
+              {
+                   case 1: System.out.println("Enter Data:");
+                   e=in.nextInt();
+                   obj.insertRight(e);
+                   System.out.println("Node Inserted on right");
+                   break;  
+                
+                   case 2:
+                         obj.PrintAllNodes();
+                         break; 
+
+                   case 0:
+                         System.out.println("Exiting ");
+                         break;
+              }while(ch!=0);
+            }
+        }
+    }
+	
